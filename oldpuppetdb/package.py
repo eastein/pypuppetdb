@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-__title__ = 'pypuppetdb'
+__title__ = 'oldpuppetdb'
 __version_info__ = (0, 1, 1)  # notest
 __version__ = '.'.join("{0}".format(num) for num in __version_info__)  # notest
 __author__ = 'Daniele Sluijters'

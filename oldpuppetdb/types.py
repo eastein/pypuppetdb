@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 
 import logging
-from pypuppetdb.utils import json_to_datetime
+from oldpuppetdb.utils import json_to_datetime
 
 log = logging.getLogger(__name__)
 

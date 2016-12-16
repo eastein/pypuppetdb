@@ -6,7 +6,7 @@ import logging
 import json
 import requests
 
-from pypuppetdb.errors import (
+from oldpuppetdb.errors import (
     ImproperlyConfiguredError,
     EmptyResponseError,
     UnsupportedVersionError,
@@ -85,8 +85,8 @@ class BaseAPI(object):
     :param timeout: (optional) Number of seconds to wait for a response.
     :type timeout: :obj:`int`
 
-    :raises: :class:`~pypuppetdb.errors.ImproperlyConfiguredError`
-    :raises: :class:`~pypuppetdb.errors.UnsupportedVersionError`
+    :raises: :class:`~oldpuppetdb.errors.ImproperlyConfiguredError`
+    :raises: :class:`~oldpuppetdb.errors.UnsupportedVersionError`
     """
     def __init__(self, api_version, host='localhost', port=8080,
                  ssl_verify=True, ssl_key=None, ssl_cert=None, timeout=10):
@@ -220,7 +220,7 @@ class BaseAPI(object):
         :param count_filter: (optional) Specify a filter for the results
         :type count_filter: :obj:`string`
 
-        :raises: :class:`~pypuppetdb.errors.EmptyResponseError`
+        :raises: :class:`~oldpuppetdb.errors.EmptyResponseError`
 
         :returns: The decoded response from PuppetDB
         :rtype: :obj:`dict` or :obj:`list`
@@ -316,6 +316,6 @@ class BaseAPI(object):
         :param metric: The name of the metric we want.
         :type metric: :obj:`string`
 
-        :returns: The return of :meth:`~pypuppetdb.api.BaseAPI._query`.
+        :returns: The return of :meth:`~oldpuppetdb.api.BaseAPI._query`.
         """
         return self._query('mbean', path=metric)

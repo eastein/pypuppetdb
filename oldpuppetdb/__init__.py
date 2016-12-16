@@ -2,14 +2,14 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 
 """
-pypuppetdb PuppetDB API library
+oldpuppetdb PuppetDB API library
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-pypuppetdb is a library to work with PuppetDB's REST API. It provides a way
+oldpuppetdb is a library to work with PuppetDB's REST API. It provides a way
 to query PuppetDB and a set of additional methods and objects to make working
 with PuppetDB's API and the responses easier:
 
-    >>> from pypuppetdb import connect
+    >>> from oldpuppetdb import connect
     >>> db = connect()
     >>> nodes = db.nodes()
     >>> print(nodes)
@@ -58,9 +58,9 @@ number of nodes as the response will be huge.
 """
 import logging
 
-from pypuppetdb.api import v2
-from pypuppetdb.api import v3
-from pypuppetdb.errors import UnsupportedVersionError
+from oldpuppetdb.api import v2
+from oldpuppetdb.api import v3
+from oldpuppetdb.errors import UnsupportedVersionError
 
 try:  # Python 2.7+
     from logging import NullHandler
@@ -100,7 +100,7 @@ def connect(api_version=3, host='localhost', port=8080, ssl_verify=False,
     :param timeout: (optional) Number of seconds to wait for a response.
     :type timeout: :obj:`int`
 
-    :raises: :class:`~pypuppetdb.errors.UnsupportedVersionError`
+    :raises: :class:`~oldpuppetdb.errors.UnsupportedVersionError`
     """
     if api_version == 3:
         return v3.API(host=host, port=port,

@@ -31,12 +31,12 @@ with codecs.open('CHANGELOG.rst', encoding='utf-8') as f:
     CHANGELOG = f.read()
 
 setup(
-    name='pypuppetdb',
+    name='oldpuppetdb',
     version='0.1.1',
     author='Daniele Sluijters',
     author_email='daniele.sluijters+pypi@gmail.com',
     packages=find_packages(),
-    url='https://github.com/nedap/pypuppetdb',
+    url='https://github.com/eastein/oldpuppetdb',
     license='Apache License 2.0',
     description='Library for working with the PuppetDB REST API.',
     long_description='\n'.join((README, CHANGELOG)),

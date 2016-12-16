@@ -3,8 +3,8 @@ from __future__ import absolute_import
 
 import logging
 
-from pypuppetdb.api import BaseAPI
-from pypuppetdb.types import (
+from oldpuppetdb.api import BaseAPI
+from oldpuppetdb.types import (
     Node, Fact, Resource,
     )
 
@@ -16,7 +16,7 @@ class API(BaseAPI):
     all v2 specific methods and ways of doing things.
 
     :param \*\*kwargs: Rest of the keywoard arguments passed on to our parent\
-            :class:`~pypuppetdb.api.BaseAPI`.
+            :class:`~oldpuppetdb.api.BaseAPI`.
     """
 
     def __init__(self, *args, **kwargs):
@@ -39,7 +39,7 @@ class API(BaseAPI):
         :type query: :obj:`None` or :obj:`string`
 
         :returns: A generator yieling Nodes.
-        :rtype: :class:`pypuppetdb.types.Node`
+        :rtype: :class:`oldpuppetdb.types.Node`
         """
 
         nodes = self._query('nodes', path=name, query=query)
