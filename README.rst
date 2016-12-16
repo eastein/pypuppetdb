@@ -1,3 +1,9 @@
+#####################
+Important Naming Note
+#####################
+
+This is a rename of pypuppetdb to oldpuppetdb (homepage https://github.com/eastein/pypuppetdb) to allow installing both an old version (0.1.x, this code) and newer pypuppetdb for situations where you need to be able to connect to both an old 2.x puppetdb and a newer puppetdb from the same python program.
+
 ##########
 pypuppetdb
 ##########
